@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@h1i9r8o1 アカウント分析レポート</title>
+<style>
+  :root {
+    --bg: #0f1419;
+    --card: #1a2332;
+    --border: #2d3a4d;
+    --text: #e7e9ea;
+    --muted: #8b98a5;
+    --accent: #1d9bf0;
+    --good: #00ba7c;
+    --warn: #ffad1f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    margin: 0;
+    padding: 20px;
+  }
+  .container { max-width: 960px; margin: 0 auto; }
+  header {
+    text-align: center;
+    padding: 32px 20px;
+    background: linear-gradient(135deg, #1a2332 0%, #15202b 100%);
+    border-radius: 16px;
+    margin-bottom: 24px;
+    border: 1px solid var(--border);
+  }
+  h1 { font-size: 1.6rem; margin: 0 0 8px; }
+  .subtitle { color: var(--muted); font-size: 0.95rem; }
+  .badge {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-top: 12px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+  }
+  h2 {
+    font-size: 1.15rem;
+    margin: 0 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2 .num {
+    background: var(--accent);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+  h3 { font-size: 1rem; margin: 16px 0 8px; color: var(--accent); }
+  ul, ol { padding-left: 1.4em; margin: 8px 0; }
+  li { margin: 6px 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .highlight {
+    background: rgba(29, 155, 240, 0.1);
+    border-left: 4px solid var(--accent);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 12px 0;
+  }
+  .good { border-left-color: var(--good); background: rgba(0, 186, 124, 0.1); }
+  .warn { border-left-color: var(--warn); background: rgba(255, 173, 31, 0.1); }
+  .tag {
+    display: inline-block;
+    background: #2d3a4d;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 6px;
+    margin-bottom: 4px;
+  }
+  .metric {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 12px 0;
+  }
+  .metric-item {
+    background: #15202b;
+    padding: 12px 16px;
+    border-radius: 8px;
+    min-width: 120px;
+  }
+  .metric-item .label { color: var(--muted); font-size: 0.75rem; }
+  .metric-item .value { font-size: 1.1rem; font-weight: 600; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 0.9rem;
+  }
+  th, td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  th { background: #15202b; color: var(--muted); font-weight: 500; }
+  .link-box {
+    background: #15202b;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 8px 0;
+  }
+  .link-box strong { display: block; margin-bottom: 2px; }
+  .link-box .url { font-size: 0.85rem; word-break: break-all; }
+  .link-box .desc { color: var(--muted); font-size: 0.85rem; margin-top: 4px; }
+  .footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+    padding: 24px;
+  }
+  @media print {
+    body { background: white; color: black; }
+    .card { border: 1px solid #ccc; }
+    a { color: #0066cc; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>@h1i9r8o1 アカウント分析レポート</h1>
+  <p class="subtitle">ヒロ@3DCGキャラモデラー | HIRO JAPAN</p>
+  <span class="badge">調査日：2026年11月11日</span>
+</header>
+
+<!-- 1. 結論 -->
+<div class="card">
+  <h2><span class="num">1</span> 結論</h2>
+  <div class="highlight good">
+    <strong>3DCG（特にMaya実務・キャラモデリング）のプロ・学生・志望者が中心のアカウント。</strong><br>
+    実務Tipsと「璃々」関連の発信が最も伸びており、そこにリソースを寄せるのが最短の伸ばし方です。
+  </div>
+  <p>フォロワー約3.4万人。コミュニティ内での認知はあるが、最近の投稿はRT・短文中心で、過去の高パフォーマンスTipsほどは伸びていない。オリジナルの価値ある発信を増やす余地がある。</p>
+</div>
+
+<!-- 2. アカウント概要 -->
+<div class="card">
+  <h2><span class="num">2</span> アカウント概要</h2>
+  <div class="metric">
+    <div class="metric-item"><div class="label">フォロワー</div><div class="value">約 33,770</div></div>
+    <div class="metric-item"><div class="label">フォロー</div><div class="value">約 3,020</div></div>
+    <div class="metric-item"><div class="label">投稿数</div><div class="value">約 23,800+</div></div>
+    <div class="metric-item"><div class="label">開設</div><div class="value">2015年10月</div></div>
+  </div>
+  <ul>
+    <li><strong>所在地</strong>：北海道</li>
+    <li><strong>認証</strong>：Blue Verified</li>
+    <li><strong>肩書</strong>：フリーランス3Dキャラモデラー</li>
+    <li><strong>経歴</strong>：ゲーム会社約10年 → アニメ系CG会社でキャラモデラー → 現在フリーランス</li>
+    <li><strong>主な活動</strong>：VTuber・VRChat・アニメ寄りの3Dモデル制作、Maya Tips発信</li>
+  </ul>
+</div>
+
+<!-- 3. 主なリンク -->
+<div class="card">
+  <h2><span class="num">3</span> 主なリンク</h2>
+
+  <h3>現在プロフィールに表示</h3>
+  <div class="link-box">
+    <strong>note（Tips・考え方）</strong>
+    <div class="url"><a href="https://note.com/hiro_japan6666" target="_blank">https://note.com/hiro_japan6666</a></div>
+    <div class="desc">3DCGの考え方、Tips、業界話。2025年1月開始。記事約18本。</div>
+  </div>
+  <div class="link-box">
+    <strong>ポートフォリオ（ENRAI）</strong>
+    <div class="url"><a href="https://enraise.net/portfolio/h6kvqbx4a3qpr0re4ja69icn" target="_blank">https://enraise.net/portfolio/h6kvqbx4a3qpr0re4ja69icn</a></div>
+    <div class="desc">現在のプロフィールURL。クリエイターマッチング用。</div>
+  </div>
+
+  <h3>販売・収益</h3>
+  <div class="link-box">
+    <strong>BOOTHショップ（HIRO JAPAN SHOP）</strong>
+    <div class="url"><a href="https://ino-nukonuko.booth.pm/" target="_blank">https://ino-nukonuko.booth.pm/</a></div>
+    <div class="desc">VRChatモデル販売のメイン。</div>
+  </div>
+  <div class="link-box">
+    <strong>璃々 -Lili- VRChatモデル</strong>
+    <div class="url"><a href="https://booth.pm/ja/items/7501600" target="_blank">https://booth.pm/ja/items/7501600</a></div>
+    <div class="desc">¥6,000。魔女コンセプトのオリジナルアバター。約8万ポリゴン。</div>
+  </div>
+  <div class="link-box">
+    <strong>璃々 Advanced Rig for Maya</strong>
+    <div class="url"><a href="https://booth.pm/ja/items/8586262" target="_blank">https://booth.pm/ja/items/8586262</a></div>
+    <div class="desc">¥5,000。mGear採用。Blender版は2026年11月中頃予定。</div>
+  </div>
+  <div class="link-box">
+    <strong>pixivFANBOX</strong>
+    <div class="url"><a href="https://hirojapan.fanbox.cc/" target="_blank">https://hirojapan.fanbox.cc/</a></div>
+    <div class="desc">メイキングやプロのノウハウ。支援プランあり。</div>
+  </div>
+
+  <h3>その他・過去のリンク</h3>
+  <div class="link-box">
+    <strong>Linktree</strong>
+    <div class="url"><a href="https://linktr.ee/hiroJapan" target="_blank">https://linktr.ee/hiroJapan</a></div>
+    <div class="desc">過去のプロフィールで使用。複数リンクをまとめていた。</div>
+  </div>
+  <div class="link-box">
+    <strong>旧ウェブサイト</strong>
+    <div class="url"><a href="https://hiro--japan.com/" target="_blank">https://hiro--japan.com/</a></div>
+    <div class="desc">以前のブログ・ポートフォリオ。稼働状況は未確認。</div>
+  </div>
+  <div class="link-box">
+    <strong>Ci-en</strong>
+    <div class="url"><a href="https://ci-en.dlsite.com/creator/7550" target="_blank">https://ci-en.dlsite.com/creator/7550</a></div>
+    <div class="desc">過去の支援プラットフォーム。</div>
+  </div>
+  <div class="link-box">
+    <strong>Bluesky</strong>
+    <div class="url"><a href="https://bsky.app/profile/hirojapan.bsky.social" target="_blank">https://bsky.app/profile/hirojapan.bsky.social</a></div>
+    <div class="desc">フォロワー約138人。投稿少なめ。</div>
+  </div>
+
+  <div class="highlight" style="margin-top:16px; font-size:0.9rem;">
+    Linktreeに記載されていたYouTube・TikTok・ArtStation・Sketchfab・vket Storeは直接URL未確認のため、本人確認をおすすめします。
+  </div>
+</div>
+
+<!-- 4. 見ている人の属性 -->
+<div class="card">
+  <h2><span class="num">4</span> 見ている人の属性</h2>
+  <h3>コア層</h3>
+  <p>日本の3DCGモデラー・アニメーター（学生〜現役プロ）。特に<strong>Mayaユーザー</strong>が厚い。</p>
+  
+  <h3>興味関心</h3>
+  <p>
+    <span class="tag">Maya実践Tips</span>
+    <span class="tag">トポロジ・UV</span>
+    <span class="tag">ゲーム/アニメ現場仕様</span>
+    <span class="tag">VRChat/VTuberモデル</span>
+    <span class="tag">Blender移行</span>
+  </p>
+
+  <h3>反応の傾向（過去の高パフォーマンス投稿より）</h3>
+  <table>
+    <tr><th>コンテンツ種類</th><th>いいね目安</th><th>特徴</th></tr>
+    <tr><td>Maya Tips動画</td><td>数百〜1,900</td><td>ブックマーク数が高い（保存されやすい）</td></tr>
+    <tr><td>業界解説・note記事</td><td>数千〜1.5万超</td><td>インプレ100万超えも。拡散力が高い</td></tr>
+    <tr><td>璃々関連（モデル/リグ）</td><td>数百前後</td><td>#lilirig でユーザー作例が生まれる</td></tr>
+  </table>
+
+  <div class="highlight">
+    <strong>周辺層</strong>：VTuber関係者、他ジャンルのCGクリエイター。純粋な一般層は薄い。
+  </div>
+</div>
+
+<!-- 5. 伸びているコンテンツ -->
+<div class="card">
+  <h2><span class="num">5</span> 伸びているコンテンツの特徴</h2>
+  <ol>
+    <li><strong>実務で使えるMaya Tips（短動画）</strong><br>トポロジ整理、UV展開、エッジスライドなど。現場目線の一言があるとさらに強い。</li>
+    <li><strong>業界の現実を語る投稿</strong><br>アニメ会社の収益構造、モデル仕様の解説など。共感と保存が同時に起きやすい。</li>
+    <li><strong>note / Fanbox の詳細記事</strong><br>Xでは要点だけ伝え、詳細は記事に誘導する形が効果的。</li>
+    <li><strong>璃々のモデル／リグ関連</strong><br>ユーザーがアニメーションを投稿してくれると、自然に拡散が生まれる。</li>
+  </ol>
+</div>
+
+<!-- 6. 伸びる余地 -->
+<div class="card">
+  <h2><span class="num">6</span> 伸びる余地があるポイント</h2>
+  
+  <h3>① 璃々プロジェクトの最大化（最優先）</h3>
+  <ul>
+    <li>Maya版リグは既にリリース済み</li>
+    <li>Blender版が2026年11月中頃リリース予定</li>
+    <li>本人も「#lilirig作例をまとめて紹介＋広告を出す」と明言</li>
+    <li>ユーザー作例を積極的にRT・まとめるだけで認知が広がる</li>
+  </ul>
+
+  <h3>② 実務Tipsの定期化</h3>
+  <ul>
+    <li>過去のTips動画は安定して高ブックマーク</li>
+    <li>Blender版のTipsを追加するとMaya以外の層にもリーチ可能</li>
+    <li>週1本程度のペースで十分効果が出やすい</li>
+  </ul>
+
+  <h3>③ note / Fanbox の連動強化</h3>
+  <ul>
+    <li>詳細記事は特に強い</li>
+    <li>Xでは「要点＋リンク」を出し、保存・拡散を狙う</li>
+  </ul>
+
+  <h3>④ コミュニティ運用の強化</h3>
+  <ul>
+    <li>#lilirig 投稿を積極的にRT</li>
+    <li>「作ってくれた人の名前も見えるようにする」方針は正しい</li>
+    <li>学生・フリーランスが投稿しやすくなるとフォロワー増加につながる</li>
+  </ul>
+</div>
+
+<!-- 7. 注意点 -->
+<div class="card">
+  <h2><span class="num">7</span> 失敗しやすい点</h2>
+  <div class="highlight warn">
+    <ul style="margin:0;">
+      <li>「短い引用コメント＋RT」だけに偏ると、インプレは出てもフォローにはつながりにくい</li>
+      <li>Tipsを出さずに「璃々の宣伝だけ」を繰り返すと、既存フォロワーは見ても新規が入りにくい</li>
+      <li>Blender版リリース時にユーザー作例をまとめきれないと、話題が散らばる</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 8. 優先アクション -->
+<div class="card">
+  <h2><span class="num">8</span> 優先してやるべきこと</h2>
+  <div class="highlight good">
+    <strong>Blender版リリースに合わせて実施</strong><br>
+    ① #lilirig 作例まとめ投稿<br>
+    ② 短いMaya / Blender Tipsを1本出す
+  </div>
+  <p>これが最も低コストで効果が見込めるアクションです。リリース前後に集中して実施すると、話題が散らばらずに済みます。</p>
+</div>
+
+<!-- 9. 補足 -->
+<div class="card">
+  <h2><span class="num">9</span> 補足</h2>
+  <ul>
+    <li>本レポートは公開情報（投稿内容・反応数・プロフィール・関連サイト）をもとにした分析です</li>
+    <li>Xの詳細アナリティクス（インプレの内訳、フォロワー属性の正確な数値など）は本人の管理画面で確認してください</li>
+    <li>調査時点：2026年11月11日</li>
+  </ul>
+</div>
+
+<footer class="footer">
+  本レポートは共有・印刷可能です。ブラウザで開いて確認してください。
+</footer>
+
+</div>
+</body>
+</html>
